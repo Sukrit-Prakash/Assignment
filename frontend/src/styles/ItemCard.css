@@ -1,0 +1,93 @@
+/* src/components/ItemCard.css */
+
+.item-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin: 16px auto;
+    max-width: 700px;
+    transition: transform 0.2s ease;
+  }
+  
+  .item-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .item-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+  }
+  
+  .item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  
+  .item-details {
+    flex: 1;
+  }
+  
+  .item-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+  }
+  
+  .item-price {
+    margin: 4px 0;
+    font-size: 1rem;
+    color: #1a202c;
+    font-weight: 500;
+  }
+  
+  .item-addedby {
+    font-size: 0.85rem;
+    color: #718096;
+  }
+  
+  .delete-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    color: #e53e3e;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    color: #c53030;
+  }
+  
+  /* Responsive Layout */
+  @media screen and (max-width: 600px) {
+    .item-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .item-image {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .item-details {
+      margin-top: 8px;
+    }
+  
+    .delete-btn {
+      position: static;
+      margin-top: 8px;
+    }
+  }
+  

@@ -1,0 +1,150 @@
+/* src/components/ProductCard.css */
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    width: 100%;
+    max-width: 340px;
+    margin: auto;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .product-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .product-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .product-description {
+    font-size: 0.9rem;
+    color: #666;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .product-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .product-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .primary-btn {
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+  }
+  
+  .primary-btn:hover {
+    background-color: #005bb5;
+  }
+  
+  .secondary-btn {
+    background-color: #e2e8f0;
+    color: #1a202c;
+    border: none;
+  }
+  
+  .secondary-btn:hover {
+    background-color: #cbd5e0;
+  }
+  
+  .wishlist-wrapper {
+    position: relative;
+  }
+  
+  .wishlist-dropdown {
+    position: relative;
+
+    top: -100%;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    min-width: 200px;
+    padding: 8px 0;
+    overflow-y: auto;
+    max-height: 200px;
+  }
+  
+  .dropdown-item {
+    padding: 10px 16px;
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+    font-size: 0.95rem;
+    color: #333;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f5f9;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .wishlist-dropdown {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+    .product-card {
+      max-width: 100%;
+    }
+  
+    .product-description {
+      display: none;
+    }
+  
+    .product-buttons {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  

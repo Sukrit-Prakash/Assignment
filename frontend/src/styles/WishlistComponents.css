@@ -1,0 +1,146 @@
+/* src/components/WishlistComponents.css */
+
+/* Container & general */
+.reaction-list,
+.comment-list,
+.comment-form {
+  margin-top: 12px;
+  width: 100%;
+  font-family: system-ui, sans-serif;
+}
+
+/* ReactionList */
+.reaction-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.reaction-btn {
+  font-size: 1.25rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.reaction-btn:hover {
+  background: #e2e8f0;
+}
+
+.reaction-items {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.reaction-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #edf2f7;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.reaction-emoji {
+  font-size: 1.1rem;
+}
+
+.reaction-user {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.remove-reaction-btn {
+  background: transparent;
+  border: none;
+  color: #e53e3e;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.remove-reaction-btn:hover {
+  color: #c53030;
+}
+
+/* CommentList */
+.comment-list {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+
+.comment-item {
+  background: #f7fafc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.comment-user {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.comment-text {
+  color: #4a5568;
+  word-break: break-word;
+}
+
+/* CommentForm */
+.comment-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.comment-input:focus {
+  border-color: #3182ce;
+}
+
+.comment-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #3182ce;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.comment-btn:hover {
+  background: #2b6cb0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .reaction-item,
+  .comment-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .remove-reaction-btn {
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,79 @@
+/* src/pages/WishlistPage.css */
+
+.wishlist-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: system-ui, sans-serif;
+    color: #2d3748;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2rem;
+    color: #718096;
+  }
+  
+  .wishlist-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .wishlist-title {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .wishlist-desc {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-top: 4px;
+  }
+  
+  .section {
+    margin-bottom: 32px;
+  }
+  
+  .section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 4px;
+    color: #2d3748;
+  }
+  
+  /* InviteList, AddItemForm, ActivityFeed assumed to have their own CSS, but wrap containers: */
+  .invites-section,
+  .add-item-section,
+  .activity-section {
+    background: #fff;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  /* Items grid */
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .wishlist-header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .wishlist-header > div {
+      width: 100%;
+    }
+  }
+  
